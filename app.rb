@@ -20,3 +20,4 @@ post 'gateway' do
     content_type :json
     {:text => message}.to_json
   end
+end
