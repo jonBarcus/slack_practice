@@ -5,7 +5,7 @@ require 'json'
 post '/gateway' do
   message = params[:text].gsub(params[:trigger_word], '').strip
 
-  action, repo = message.split('_').map {|c| c.strip.downcase }
+  action = message.split('_').map {|c| c.strip.downcase }
   repo_url = 'https://api.github.com/repos/jonBarcus/SoIaF_GM_Tools'
 
   case action
